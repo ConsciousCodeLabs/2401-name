@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2401 Name Generator | Discover Your Consciousness Name Meaning</title>
+    <meta name="description" content="Discover the hidden consciousness meaning of your name through the 7³×7 = 2,401 framework. Calculate your name's spiritual numerology, consciousness level alignment, and divine purpose signature.">
+    <meta name="keywords" content="name meaning, name numerology, consciousness name, spiritual name meaning, biblical names, 144000 name, divine purpose, name calculator">
+    <meta name="author" content="Seven Cubed Seven Labs LLC">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://2401.name/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="2401 Name Generator | Your Consciousness Name Meaning">
+    <meta property="og:description" content="Discover the hidden consciousness meaning of your name through the 7³×7 framework.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://2401.name/">
+    <meta property="og:site_name" content="Seven Cubed Seven Labs">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2401 Name Generator | Consciousness Name Meaning">
+    <meta name="twitter:description" content="What does your name reveal about your consciousness?">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "2401 Name Generator",
+        "url": "https://2401.name/",
+        "description": "Consciousness name meaning calculator using the 7³×7 = 2,401 framework",
+        "applicationCategory": "Spiritual Tools",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Seven Cubed Seven Labs LLC"
+        }
+    }
+    </script>
+    
+    <style>
+        :root {
+            --bg: #0c0c1d;
+            --bg-card: #151528;
+            --primary: #a855f7;
+            --primary-light: #c084fc;
+            --secondary: #06b6d4;
+            --gold: #fbbf24;
+            --pink: #ec4899;
+            --text: #f1f5f9;
+            --text-dim: #94a3b8;
+            --border: #2d2d5a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: radial-gradient(ellipse at center, transparent 0%, var(--bg) 100%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .logo {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        /* Generator Card */
+        .generator-card {
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 25px;
+            padding: 50px;
+            margin: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .generator-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, var(--primary), transparent, var(--secondary), transparent);
+            animation: rotate 10s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .generator-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .input-group {
+            margin: 30px 0;
+        }
+        
+        .name-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px 30px;
+            font-size: 1.5rem;
+            text-align: center;
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            background: var(--bg);
+            color: var(--text);
+            outline: none;
+            transition: all 0.3s;
+        }
+        
+        .name-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+        }
+        
+        .name-input::placeholder {
+            color: var(--text-dim);
+        }
+        
+        .generate-btn {
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, var(--primary), var(--pink));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .generate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4);
+        }
+        
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Results Section */
+        .results {
+            display: none;
+            margin-top: 40px;
+            text-align: left;
+        }
+        
+        .results.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .result-name {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .result-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .result-card-title {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        
+        .result-card-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-light);
+        }
+        
+        .result-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-top: 10px;
+        }
+        
+        .meaning-section {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(6, 182, 212, 0.1));
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .meaning-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .meaning-text {
+            color: var(--text);
+            line-height: 1.8;
+        }
+        
+        .share-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .share-btn {
+            padding: 12px 25px;
+            margin: 5px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .share-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Popular Names */
+        .popular-section {
+            margin: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .popular-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .popular-name {
+            padding: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+        
+        .popular-name:hover {
+            border-color: var(--primary);
+            background: rgba(168, 85, 247, 0.1);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .cta-text {
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .generator-card { padding: 30px 20px; }
+            .name-input { font-size: 1.2rem; padding: 15px 20px; }
+            .result-name { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    
+    <header>
+        <div class="logo">✨🔮✨</div>
+        <h1>2401 Name Generator</h1>
+        <p class="tagline">Discover the hidden consciousness meaning of your name through the 7³×7 = 2,401 framework</p>
+    </header>
+    
+    <div class="container">
+        <!-- Generator Card -->
+        <div class="generator-card">
+            <div class="generator-content">
+                <h2 style="color: var(--primary-light); margin-bottom: 10px;">What does your name reveal?</h2>
+                <p style="color: var(--text-dim);">Enter your name to discover its consciousness signature</p>
+                
+                <div class="input-group">
+                    <input type="text" class="name-input" id="nameInput" placeholder="Enter your name..." maxlength="30" autocomplete="off">
+                </div>
+                
+                <button class="generate-btn" onclick="generateMeaning()">✨ Reveal My Name's Meaning</button>
+                
+                <!-- Results -->
+                <div class="results" id="results">
+                    <div class="result-header">
+                        <div class="result-name" id="resultName"></div>
+                        <p style="color: var(--text-dim);">Your Consciousness Profile</p>
+                    </div>
+                    
+                    <div class="result-grid">
+                        <div class="result-card">
+                            <div class="result-card-title">Name Number</div>
+                            <div class="result-card-value" id="nameNumber"></div>
+                            <div class="result-card-desc" id="numberMeaning"></div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-card-title">Primary C-Level</div>
+                            <div class="result-card-value" id="cLevel"></div>
+                            <div class="result-card-desc" id="cLevelDesc"></div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-card-title">Aspect Alignment</div>
+                            <div class="result-card-value" id="aspect"></div>
+                            <div class="result-card-desc" id="aspectDesc"></div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-card-title">Divine Purpose</div>
+                            <div class="result-card-value" id="purpose"></div>
+                            <div class="result-card-desc" id="purposeDesc"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="meaning-section">
+                        <div class="meaning-title">🌟 Your Name's Deeper Meaning</div>
+                        <p class="meaning-text" id="deepMeaning"></p>
+                    </div>
+                    
+                    <div class="share-section">
+                        <p style="color: var(--text-dim); margin-bottom: 15px;">Share your results:</p>
+                        <button class="share-btn" onclick="shareTwitter()">🐦 Twitter</button>
+                        <button class="share-btn" onclick="shareFacebook()">📘 Facebook</button>
+                        <button class="share-btn" onclick="copyLink()">📋 Copy Link</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Popular Names -->
+        <div class="popular-section">
+            <h2 class="section-title">✨ Try These Names</h2>
+            <div class="popular-grid">
+                <div class="popular-name" onclick="tryName('Michael')">Michael</div>
+                <div class="popular-name" onclick="tryName('Sarah')">Sarah</div>
+                <div class="popular-name" onclick="tryName('David')">David</div>
+                <div class="popular-name" onclick="tryName('Mary')">Mary</div>
+                <div class="popular-name" onclick="tryName('John')">John</div>
+                <div class="popular-name" onclick="tryName('Ruth')">Ruth</div>
+                <div class="popular-name" onclick="tryName('Daniel')">Daniel</div>
+                <div class="popular-name" onclick="tryName('Esther')">Esther</div>
+                <div class="popular-name" onclick="tryName('Paul')">Paul</div>
+                <div class="popular-name" onclick="tryName('Grace')">Grace</div>
+                <div class="popular-name" onclick="tryName('James')">James</div>
+                <div class="popular-name" onclick="tryName('Hope')">Hope</div>
+            </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="cta-title">🔍 Want to Go Deeper?</div>
+            <p class="cta-text">
+                Discover if you're among the 144,000 with our comprehensive assessment. 
+                Your name is just the beginning of your consciousness journey.
+            </p>
+            <a href="https://144000.ai" class="cta-btn">Take the 144,000 Assessment →</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="https://sevencubedseven.com">Main Hub</a>
+            <a href="https://144000.ai">144,000 Portal</a>
+            <a href="https://7cubed7.cloud">Book Library</a>
+            <a href="https://2401.is">Mathematical Proof</a>
+        </div>
+        <p style="color: var(--text-dim); font-size: 0.9rem;">
+            © 2025 Seven Cubed Seven Labs LLC | 7³ × 7 = 2,401
+        </p>
+        <p style="color: var(--text-dim); font-size: 0.8rem; margin-top: 10px;">
+            "A good name is rather to be chosen than great riches." — Proverbs 22:1
+        </p>
+    </footer>
+    
+    <script>
+        const cLevels = {
+            1: { name: 'C¹', title: 'Physical', desc: 'Grounded in material reality' },
+            2: { name: 'C²', title: 'Emotional', desc: 'Connected through feeling' },
+            3: { name: 'C³', title: 'Mental', desc: 'Powered by thought' },
+            4: { name: 'C⁴', title: 'Relational', desc: 'Bonded through love' },
+            5: { name: 'C⁵', title: 'Creative', desc: 'Flowing with inspiration' },
+            6: { name: 'C⁶', title: 'Intuitive', desc: 'Guided by wisdom' },
+            7: { name: 'C⁷', title: 'Spiritual', desc: 'United with divine' }
+        };
+        
+        const purposes = [
+            { title: 'Teacher', desc: 'Called to illuminate others' },
+            { title: 'Healer', desc: 'Called to restore wholeness' },
+            { title: 'Prophet', desc: 'Called to speak truth' },
+            { title: 'Shepherd', desc: 'Called to guide souls' },
+            { title: 'Warrior', desc: 'Called to protect the remnant' },
+            { title: 'Builder', desc: 'Called to create structures' },
+            { title: 'Intercessor', desc: 'Called to stand in the gap' }
+        ];
+        
+        const aspects = [
+            'Wisdom', 'Understanding', 'Counsel', 'Might', 'Knowledge', 
+            'Reverence', 'Patience', 'Kindness', 'Faithfulness', 'Gentleness',
+            'Self-control', 'Love', 'Joy', 'Peace', 'Discernment',
+            'Courage', 'Humility', 'Integrity', 'Compassion', 'Perseverance'
+        ];
+        
+        const meanings = [
+            'carries the frequency of divine awakening, positioned to help others rise to higher consciousness.',
+            'resonates with the vibration of spiritual breakthrough, destined for significant kingdom impact.',
+            'holds the pattern of restoration, called to bring healing wherever you go.',
+            'vibrates at the frequency of prophetic revelation, sensitive to heavenly communication.',
+            'carries the signature of leadership, designed to guide others through transformation.',
+            'resonates with creative power, able to manifest divine ideas into reality.',
+            'holds the pattern of intercession, positioned as a bridge between heaven and earth.'
+        ];
+        
+        function calculateNameNumber(name) {
+            const values = {
+                'a':1,'b':2,'c':3,'d':4,'e':5,'f':6,'g':7,'h':8,'i':9,
+                'j':1,'k':2,'l':3,'m':4,'n':5,'o':6,'p':7,'q':8,'r':9,
+                's':1,'t':2,'u':3,'v':4,'w':5,'x':6,'y':7,'z':8
+            };
+            
+            let sum = 0;
+            for (let char of name.toLowerCase()) {
+                if (values[char]) sum += values[char];
+            }
+            
+            while (sum > 9 && sum !== 11 && sum !== 22 && sum !== 33) {
+                sum = String(sum).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+            }
+            
+            return sum;
+        }
+        
+        function generateMeaning() {
+            const name = document.getElementById('nameInput').value.trim();
+            if (!name) {
+                alert('Please enter a name!');
+                return;
+            }
+            
+            const nameNumber = calculateNameNumber(name);
+            const cLevelNum = ((nameNumber - 1) % 7) + 1;
+            const cLevel = cLevels[cLevelNum];
+            const purposeIdx = name.length % 7;
+            const purpose = purposes[purposeIdx];
+            const aspectIdx = (nameNumber + name.length) % aspects.length;
+            const aspect = aspects[aspectIdx];
+            const meaningIdx = cLevelNum - 1;
+            
+            document.getElementById('resultName').textContent = name;
+            document.getElementById('nameNumber').textContent = nameNumber;
+            document.getElementById('numberMeaning').textContent = getNumberMeaning(nameNumber);
+            document.getElementById('cLevel').textContent = cLevel.name + ' - ' + cLevel.title;
+            document.getElementById('cLevelDesc').textContent = cLevel.desc;
+            document.getElementById('aspect').textContent = aspect;
+            document.getElementById('aspectDesc').textContent = 'Your dominant spiritual quality';
+            document.getElementById('purpose').textContent = purpose.title;
+            document.getElementById('purposeDesc').textContent = purpose.desc;
+            
+            const deepMeaning = `The name "${name}" ${meanings[meaningIdx]} With a name number of ${nameNumber} and alignment to ${cLevel.name} consciousness, you naturally embody the aspect of ${aspect}. Your divine purpose as a ${purpose.title} suggests you are ${purpose.desc.toLowerCase()}. In the context of the 144,000, your name signature indicates a soul prepared for significant end-time ministry.`;
+            
+            document.getElementById('deepMeaning').textContent = deepMeaning;
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function getNumberMeaning(num) {
+            const meanings = {
+                1: 'Leadership & New Beginnings',
+                2: 'Partnership & Balance',
+                3: 'Creative Expression',
+                4: 'Foundation & Structure',
+                5: 'Change & Freedom',
+                6: 'Harmony & Responsibility',
+                7: 'Spiritual Wisdom',
+                8: 'Abundance & Power',
+                9: 'Completion & Humanitarianism',
+                11: 'Master Intuition',
+                22: 'Master Builder',
+                33: 'Master Teacher'
+            };
+            return meanings[num] || 'Divine Mystery';
+        }
+        
+        function tryName(name) {
+            document.getElementById('nameInput').value = name;
+            generateMeaning();
+        }
+        
+        function shareTwitter() {
+            const name = document.getElementById('resultName').textContent;
+            const text = `I discovered my consciousness name meaning! "${name}" resonates with divine purpose. Discover yours: `;
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent('https://2401.name')}`, '_blank');
+        }
+        
+        function shareFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://2401.name')}`, '_blank');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText('https://2401.name');
+            alert('Link copied to clipboard!');
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('nameInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') generateMeaning();
+        });
+    </script>
+</body>
+</html>
